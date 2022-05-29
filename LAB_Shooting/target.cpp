@@ -155,6 +155,9 @@ void Target::keyShot(QAction* pAction)
         emit statusInfo(QString("±%1,±%2").arg(newWidth/2).arg(newHeight/2), ammo, inTarget, shots,
                         QSize(shotDg->xCoord->text().toDouble(), shotDg->yCoord->text().toDouble()), *keyHit);
     }
+    shotDg->xCoord->setFocus();
+    shotDg->xCoord->setText("");
+    shotDg->yCoord->setText("");
     *keyHit=false;
 
 }

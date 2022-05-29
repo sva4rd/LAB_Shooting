@@ -86,6 +86,7 @@ void MainWindow::slotNewGame()
 
         radStatus->setText(QString("R1: %1, R2: %2").arg(sTarget->r1).arg(sTarget->r2));
         sTarget->update();
+        in->setFocus(Qt::NoFocusReason);
     }
 }
 
