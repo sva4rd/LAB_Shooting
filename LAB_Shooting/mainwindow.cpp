@@ -90,4 +90,9 @@ void MainWindow::slotNewGame()
     }
 }
 
-MainWindow::~MainWindow(){}
+MainWindow::~MainWindow()
+{
+    delete in;
+    delete shD;
+    delete sTarget;
+}
