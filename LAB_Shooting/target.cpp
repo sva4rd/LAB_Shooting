@@ -96,8 +96,8 @@ void Target::mousePressEvent(QMouseEvent *pe)
     if(ammo!=0 && pe->buttons() == Qt::LeftButton)
     {
         bool hit = false;
-        xPressed = pe->position().x() - newWidth/2 - x;
-        yPressed = pe->position().y() - newHeight/2 - y;
+        xPressed = pe->x() - newWidth/2 - x;
+        yPressed = pe->y() - newHeight/2 - y;
         if((xPressed*xPressed+yPressed*yPressed<=r1*r1 && xPressed+x<=x && yPressed+y<=y)
                 || (r1*r1<=xPressed*xPressed+yPressed*yPressed && xPressed*xPressed+yPressed*yPressed<=r2*r2
                     && xPressed+x>=x && yPressed+y>=y))
